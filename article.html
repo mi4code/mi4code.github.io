@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+		
+		<style>
+			#header {
+				position: sticky; /*fixed*/
+			}
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<div id="header">
+		mi4code
+		darkmode
+		language
+		
+		
+		</div>
+		
+		<div id="page">
+			
+		</div>
+		
+		<!-- <md>
+		## heloo
+		 - wlc
+		 - to
+		 
+		</md> -->
+		
+		<script>
+		
+			const placeholder = `
+## This page doesnt exist
+*or this web is broken*
+
+[go home](./index.html)
+			`;
+			
+			var converter = new showdown.Converter();
+			
+			fetch( document.location.href.substr(document.location.href.lastIndexOf("/article.html?a=")+"/article.html?a=".length) ) // the url is '/article.html?a=<name>.md'
+				.then( function (response) { 
+					response.text().then(function (text){ 
+						document.getElementById("page").innerHTML = converter.makeHtml(text);
+					}) } )
+				.catch( function (error) {
+					document.getElementById("page").innerHTML = converter.makeHtml(placeholder);
+				} );
+
+			
+			//document.getElementById("page").innerHTML = converter.makeHtml(document.getElementsByTagName("md")[0].innerHTML);
+			
+		</script>
+	
+	</body>
+	
+</html>
+
+
+
+
+
+
