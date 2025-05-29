@@ -1,5 +1,5 @@
-[Site map](./article.html?a=Site map.md)
+[Site map](./article.html?a=Site+map.md)
 [Home](./article.html?a=Home.md)
 [electronics-modules-reviews](./article.html?a=electronics-modules-reviews/README.md)
-[LCD eDP 1080p 13.3'' screen with driver board and touchscreen](./article.html?a=electronics-modules-reviews/LCD eDP 1080p 13.3'' screen with driver board and touchscreen/README.md)
-[12V jack to Molex or SATA power cable](./article.html?a=electronics-modules-reviews/12V jack to Molex or SATA power cable/README.md)
+[LCD eDP 1080p 13.3'' screen with driver board and touchscreen](./article.html?a=electronics-modules-reviews/LCD+eDP+1080p+13.3''+screen+with+driver+board+and+touchscreen/README.md)
+[12V jack to Molex or SATA power cable](./article.html?a=electronics-modules-reviews/12V+jack+to+Molex+or+SATA+power+cable/README.md)

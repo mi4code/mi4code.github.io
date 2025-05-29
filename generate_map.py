@@ -18,5 +18,5 @@ for f in list_all_files("./"):
     name = ""
     if f.endswith("README.md"): name = ([".","."]+f.split("/"))[-2]
     else: name = f.split("/")[-1][:-3]
-    file.write("["+name+"](./article.html?a="+path+")\n")
+    file.write("["+name+"](./article.html?a="+path.replace(" ", "+")+")\n")
     
