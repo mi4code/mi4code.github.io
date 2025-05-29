@@ -1,13 +1,48 @@
+<!DOCTYPE html>
 <html>
 
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 		
 		<style>
-			#header {
-				position: sticky; /*fixed*/
+		
+			body {
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
 			}
+		
+			#header {
+				position: sticky;
+				top: 0;
+  
+				width: 100%;
+				overflow: auto;
+				
+				background-color: rgba(85, 119, 170, 0.8);
+			}
+
+			#header a {
+				float: right;
+				
+				width: auto;
+				text-align: center;
+				font-size: 12px;
+				padding: 9px;
+				overflow: auto;
+				
+				color: #eee;
+				transition: all 0.3s ease;
+				
+				text-decoration: none;
+			}
+
+			#header a:hover {
+				background-color: rgba(85, 119, 170, 1);
+			}
+
 		</style>
 	
 	</head>
@@ -15,18 +50,150 @@
 	<body>
 	
 		<div id="header">
-		mi4code
-		darkmode
-		language
-		
-		
+			<a href="/" style="float: left;">🏠︎ mi4code</a>
+			<a onclick=" document.getElementById('style').innerHTML = document.getElementById('style').innerHTML.replaceAll('@media (prefers-color-scheme: light)','@media (prefers-color-scheme: none)').replaceAll('@media (prefers-color-scheme: dark)', '@media (prefers-color-scheme: light)').replaceAll('@media (prefers-color-scheme: none)', '@media (prefers-color-scheme: dark)'); " title="toggle light/dark mode">☀️/🌙</a>
+			<a href="https://www.github.com/mi4code">🐙🐈 GitHub</a>
 		</div>
 		
-		<div id="page">
+		<!-- GENERATED PAGE CONTENT FROM MD -->
+		
+		<style id="style">
+		
+			#page {
+				padding: 25px;
+			}
 			
+			#page img {
+				width: 75%;
+			}
+			
+			#page h1, #page h2, #page h3, #page h4, #page h5, #page h6 {
+				font-weight: 600;
+				margin-top: 1.5em;
+				margin-bottom: 0.5em;
+				line-height: 1.25;
+			}
+			
+			#page p {
+				/*margin: 1em 0;*/
+			}
+
+			#page ul, #page ol {
+				padding-left: 2em;
+				/*margin: 1em 0;*/
+			}
+
+			#page code {
+				font-family: monospace;
+				font-size: 90%;
+				padding: 0.2em 0.4em;
+				border-radius: 6px;
+			}
+			#page pre code {
+				padding: 0;
+				background: none;
+			}
+			
+			#page hr {
+				border: 0;
+				height: 1px;
+				background: currentColor;
+				opacity: 0.2;
+				margin: 2em 0;
+			}
+
+			#page table {
+				border-collapse: collapse;
+				width: 80%;
+				margin: 1em 0;
+			}
+			#page th, #page td {
+				border: 1px solid #888;
+				padding: 0.5em;
+				text-align: center;
+			}
+		
+		
+			@media (prefers-color-scheme: light) {
+			
+				body {
+					background-color: #fff;
+					color: #111;
+				}
+
+
+				#page a {
+					color: #99f;
+				}
+				
+				#page code, #page pre {
+					background-color: #eee;
+				}
+				#page pre {
+					padding: 1em;
+					overflow: auto;
+					border-radius: 6px;
+				}
+
+				#page blockquote {
+					color: #aaa;
+					border-left: 4px solid #ccc;
+					background: #eee;
+					padding: 0.5em 1em;
+					margin: 1em 0;
+				}
+
+				#page th, #page td {
+					border-color: #eee;
+				}
+				
+			}
+			
+			
+			@media (prefers-color-scheme: dark) {
+			
+				body {
+					background-color: #111;
+					color: #fff;
+				}
+			
+			
+				#page a {
+					color: #99f;
+				}
+				
+				#page code, #page pre {
+					background-color: #333;
+				}
+				#page pre {
+					padding: 1em;
+					overflow: auto;
+					border-radius: 6px;
+				}
+
+				#page blockquote {
+					color: #777;
+					border-left: 4px solid #555;
+					background: #333;
+					padding: 0.5em 1em;
+					margin: 1em 0;
+				}
+
+				#page th, #page td {
+					border-color: #111;
+				}
+				
+			}
+			
+			
+		</style>
+		
+		<div id="page">
 		</div>
 		
 		<script>
+		
+			// HOSTED ON GITHUB (https://pages.github.com)
 		
 			const placeholder = `
 ## This page doesnt exist
@@ -50,13 +217,9 @@
 			//document.getElementById("page").innerHTML = converter.makeHtml(document.getElementsByTagName("md")[0].innerHTML);
 			
 		</script>
+		
+		<!---------------------------->
 	
 	</body>
 	
 </html>
-
-
-
-
-
-
