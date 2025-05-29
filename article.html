@@ -51,6 +51,7 @@
 	
 		<div id="header">
 			<a href="/" style="float: left;">🏠︎ mi4code</a>
+			<a href="/article.html?a=Site map.md" style="float: left;">🌐 Site map</a>
 			<a onclick=" document.getElementById('style').innerHTML = document.getElementById('style').innerHTML.replaceAll('@media (prefers-color-scheme: light)','@media (prefers-color-scheme: none)').replaceAll('@media (prefers-color-scheme: dark)', '@media (prefers-color-scheme: light)').replaceAll('@media (prefers-color-scheme: none)', '@media (prefers-color-scheme: dark)'); " title="toggle light/dark mode">☀️/🌙</a>
 			<a href="https://www.github.com/mi4code">🐙🐈 GitHub</a>
 		</div>
@@ -208,6 +209,10 @@
 				.then( function (response) { 
 					response.text().then(function (text){ 
 						document.getElementById("page").innerHTML = converter.makeHtml(text);
+						//document.querySelectorAll("#page img").forEach(e => { e.src = ... })
+						var base = document.createElement('base');
+						base.href = "./"+document.location.href.substr(document.location.href.lastIndexOf("/article.html?a=")+"/article.html?a=".length);
+						document.head.appendChild(base);
 					}) } )
 				.catch( function (error) {
 					document.getElementById("page").innerHTML = converter.makeHtml(placeholder);
