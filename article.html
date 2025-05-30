@@ -209,6 +209,7 @@
 			fetch( document.location.href.substr(document.location.href.lastIndexOf("/article.html?a=")+"/article.html?a=".length) ) // the url is '/article.html?a=<name>.md'
 				.then( function (response) { 
 					response.text().then(function (text){ 
+						if (text.includes("<title>Page not found &middot; GitHub Pages</title>")) { throw new Error("404 not found"); } // GitHub's 404 page
 						document.getElementById("page").innerHTML = converter.makeHtml(text);
 						//document.querySelectorAll("#page img").forEach(e => { e.src = ... })
 						var base = document.createElement('base');
