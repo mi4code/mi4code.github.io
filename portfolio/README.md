@@ -1,5 +1,18 @@
 <!-- SORT FROM NEWEST TO OLDEST -->
 
+## DIY IP camera
+Raspberry Pi Zero 2W + Camera module with IR cut filter + some IR LEDs. \
+(I'm going to make this open hardware+software soon, stay tuned.)
+
+![](piipcam.png)
+
+
+## My homelab server
+DIY case from aluminium and 3D printed parts + OLED display and gesture sensor + Raspberry Pi + HDD. \
+Guide and code for the display part [here](https://gist.github.com/mi4code/0ebb5886123edf615cbfee39fe3d29e8).
+
+![](case.jpg)
+
 
 ## My personal Wayland Linux desktop
 Currently just background, simple panel and terminal built on top of HUI library. \
