@@ -67,6 +67,7 @@
 			#page img, #page video {
 				max-width: 65vh;
 				margin: 15px;
+				border-radius: 10px;
 			}
 			
 			#page h1, #page h2, #page h3, #page h4, #page h5, #page h6 {
@@ -114,12 +115,19 @@
 				padding: 0.5em;
 				text-align: center;
 			}
+
+			#page em::before {
+			    content: "";
+			    display: block;
+			    height: 0.1em;
+			}
 		
 		
 			@media (prefers-color-scheme: light) {
 			
 				body {
-					background-color: #fff;
+					background: radial-gradient(circle at center 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.25) 100%  );
+					background-attachment: fixed;
 					color: #111;
 				}
 
@@ -155,7 +163,8 @@
 			@media (prefers-color-scheme: dark) {
 			
 				body {
-					background-color: #111;
+					background-color: radial-gradient(ellipse at center, #043e7b, #111);
+					background-attachment: fixed;
 					color: #fff;
 				}
 			
